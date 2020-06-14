@@ -23,12 +23,6 @@ var queen = {
     },
 };
 
-var queensecond = {
-    position: {
-        x: 7,
-        y: 7,
-    },
-};
 
 
 function moveforward(num, dir) {
@@ -238,212 +232,6 @@ function moveforward(num, dir) {
     }
 }
 
-function moveforward1(num1, dir1) {
-    var c = document.getElementById("move").value;
-
-    let temp2;
-    let temp3;
-    switch (dir1) {
-        case "N":
-            if (c == "FORWARD") {
-                document.write(b);
-                temp2 = queensecond.position.x - num1;
-                if (temp2 > 7 || temp2 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queensecond.position.x = temp2;
-                }
-            } else if (c == "BACKWARD") {
-                document.write(b);
-                temp2 = queensecond.position.x + num1;
-                if (temp2 > 7 || temp2 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queensecond.position.x = temp2;
-                }
-            }
-            break;
-        case "S":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp2 = queensecond.position.x + num;
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.x - num;
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                }
-            }
-            break;
-        case "E":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.y + num;
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.y = temp;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.y + num;
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.y = temp;
-                }
-            }
-            break;
-        case "W":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.y - num;
-
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.y = temp;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.y - num;
-
-                if (temp > 7 || temp < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.y = temp;
-                }
-            }
-            break;
-        case "NE":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.x - num;
-                temp1 = queen.position.y + num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            } else if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.x - num;
-                temp1 = queen.position.y + num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            }
-
-            break;
-        case "NW":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.x - num;
-                temp1 = queen.position.y - num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.x - num;
-                temp1 = queen.position.y - num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            }
-            break;
-        case "SE":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.x + num;
-                temp1 = queen.position.y + num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.x + num;
-                temp1 = queen.position.y + num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            }
-            break;
-        case "SW":
-            if (b == "FORWARD") {
-                document.write(b);
-                temp = queen.position.x + num;
-                temp1 = queen.position.y - num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            } else if (b == "BACKWARD") {
-                document.write(b);
-                temp = queen.position.x + num;
-                temp1 = queen.position.y - num;
-
-                if (temp > 7 || (temp < 0 && temp1 > 7) || temp1 < 0) {
-                    console.log("Outside Boundary");
-                    document.write("Outside Boundary");
-                } else {
-                    queen.position.x = temp;
-                    queen.position.y = temp1;
-                }
-            }
-            break;
-
-        default:
-            console.log("invalid");
-    }
-}
 
 function jump1() {
     var a = document.getElementById("queen1").value;
@@ -458,4 +246,237 @@ function jump1() {
     document.write("\n");
     document.write(" YOUR POSITION " + board[queen.position.x][queen.position.y]);
     document.write(" YOUR POSITION " + board[queensecond.position.x][queensecond.position.y]);
+}
+
+var queen2 = {
+    position: {
+        x: 7,
+        y: 7,
+    },
+};
+
+
+function move2(num1, dir1) {
+    var d = document.getElementById("move1").value;
+
+    let temp2;
+    let temp3;
+    switch (dir1) {
+        case "N":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                }
+            }
+            break;
+        case "S":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                }
+            }
+            break;
+        case "E":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.y + num1;
+
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.y = temp2;
+                }
+            } else if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.y + num1;
+
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.y = temp2;
+                }
+            }
+            break;
+        case "W":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.y - num1;
+
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.y = temp2;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.y - num1;
+
+                if (temp2 > 7 || temp2 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.y = temp2;
+                }
+            }
+
+            break;
+
+        case "NE":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                temp3 = queen2.position.y + num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                temp3 = queen2.position.y + num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            }
+            break;
+        case "NW":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                temp3 = queen2.position.y - num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x - num1;
+                temp3 = queen2.position.y - num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            }
+            break;
+        case "SE":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                temp3 = queen2.position.y + num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                temp3 = queen2.position.y + num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            }
+
+            break;
+        case "SW":
+            if (d == "FORWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                temp3 = queen2.position.y - num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            } else if (d == "BACKWARD") {
+                document.write(d);
+                temp2 = queen2.position.x + num1;
+                temp3 = queen2.position.y - num1;
+
+                if (temp2 > 7 || (temp2 < 0 && temp3 > 7) || temp3 < 0) {
+                    console.log("Outside Boundary");
+                    document.write("Outside Boundary");
+                } else {
+                    queen2.position.x = temp2;
+                    queen2.position.y = temp3;
+                }
+            }
+            break;
+
+        default:
+            console.log("Invalid");
+    }
+}
+
+function jump2() {
+    var c = document.getElementById("queen2").value;
+    var value1 = c.split(" ");
+    value1.forEach((element) => {
+        let num1 = Number(element.slice(element.length - 1));
+        let dir1 = element.slice(0, element.length - 1);
+        move2(num1, dir1);
+    });
+    console.log("your position" + board[queen2.position.x][queen2.position.y]);
+    document.write("\n");
+    document.write("\n");
+    document.write(" YOUR POSITION " + board[queen2.position.x][queen2.position.y]);
 }
